@@ -38,6 +38,13 @@ gem 'jbuilder', '~> 2.5'
 gem 'rails_admin'
 gem 'devise'
 
+# Image base 64
+gem 'carrierwave'
+gem 'carrierwave-base64'
+
+gem 'mini_magick'
+gem 'cloudinary'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
