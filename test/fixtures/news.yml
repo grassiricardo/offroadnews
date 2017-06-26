@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: 
+  sub_title: 
+  content: 
+  photo_cap: 
+  diplay_date: 
+  category: 
+  show_slide_show: false
+
+two:
+  title: 
+  sub_title: 
+  content: 
+  photo_cap: 
+  diplay_date: 
+  category: 
+  show_slide_show: false
