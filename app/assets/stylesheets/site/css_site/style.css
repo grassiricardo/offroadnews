@@ -971,7 +971,7 @@ header {
     background: #222;
     position: fixed;
     border: 5px solid #333;
-    background-image: url(../images/side-menu.jpg);
+    background-image: url(../image/side-menu.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
