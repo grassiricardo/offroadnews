@@ -226,7 +226,7 @@ $(document).ready(function() {
 
 
     /* ---------------------------------------------
-      Pre loader loader 
+      Pre loader loader
      --------------------------------------------- */
 
     $(".se-pre-con").fadeOut("slow");
@@ -272,25 +272,25 @@ $(document).ready(function() {
 
 
     /* ---------------------------------------------
-     Date picker  
+     Date picker
      --------------------------------------------- */
 
-    $("#from").datepicker({
-        defaultDate: "+1w",
-        changeMonth: true,
-        numberOfMonths: 3,
-        onClose: function(selectedDate) {
-            $("#to").datepicker("option", "minDate", selectedDate);
-        }
-    });
-    $("#to").datepicker({
-        defaultDate: "+1w",
-        changeMonth: true,
-        numberOfMonths: 3,
-        onClose: function(selectedDate) {
-            $("#from").datepicker("option", "maxDate", selectedDate);
-        }
-    });
+    // $("#from").datepicker({
+    //     defaultDate: "+1w",
+    //     changeMonth: true,
+    //     numberOfMonths: 3,
+    //     onClose: function(selectedDate) {
+    //         $("#to").datepicker("option", "minDate", selectedDate);
+    //     }
+    // });
+    // $("#to").datepicker({
+    //     defaultDate: "+1w",
+    //     changeMonth: true,
+    //     numberOfMonths: 3,
+    //     onClose: function(selectedDate) {
+    //         $("#from").datepicker("option", "maxDate", selectedDate);
+    //     }
+    // });
 
 
 
@@ -298,18 +298,18 @@ $(document).ready(function() {
     /* ---------------------------------------------
      Youtube Video
      --------------------------------------------- */
-    var api_key = 'AIzaSyAroKpLQWTON6y34m5VqGcLCPtOmfLBqh4'; // use your own api key
+    // var api_key = 'AIzaSyAroKpLQWTON6y34m5VqGcLCPtOmfLBqh4'; // use your own api key
 
     // Start all players on the page with default options
-    $('.RYPP').rypp('AIzaSyAroKpLQWTON6y34m5VqGcLCPtOmfLBqh4'); // use your own api key
+    // $('.RYPP').rypp('AIzaSyAroKpLQWTON6y34m5VqGcLCPtOmfLBqh4'); // use your own api key
 
     // Start two players by ID, with default settings
-    $('#rypp-demo-4').rypp(api_key, {
-        autoplay: false,
-        autonext: false,
-        loop: false,
-        mute: true
-    });
+    // $('#rypp-demo-4').rypp(api_key, {
+    //     autoplay: false,
+    //     autonext: false,
+    //     loop: false,
+    //     mute: true
+    // });
 
     /* ---------------------------------------------
      Youtube Video for home page four
@@ -354,7 +354,7 @@ $(document).ready(function() {
     setInterval(function() { tick() }, 3000);
 
     /* ---------------------------------------------
-     Form 
+     Form
      --------------------------------------------- */
 
     if (!String.prototype.trim) {
@@ -395,11 +395,11 @@ $(window).on({
     load: function() {
 
         /* ---------------------------------------------
-          Scroll Box 
+          Scroll Box
          --------------------------------------------- */
 
-        $(".mobile-menu").mCustomScrollbar({ theme: "minimal" });
-        $(".archive-post").mCustomScrollbar({ theme: "minimal-dark" });
+        // $(".mobile-menu").mCustomScrollbar({ theme: "minimal" });
+        // $(".archive-post").mCustomScrollbar({ theme: "minimal-dark" });
 
 
     },
@@ -407,7 +407,7 @@ $(window).on({
     scroll: function() {
 
         /* ---------------------------------------------
-        Scroll to Top 
+        Scroll to Top
         --------------------------------------------- */
 
         if ($(this).scrollTop() !== 0) {
@@ -425,7 +425,7 @@ $(window).on({
  This is for Mobile Menu
  --------------------------------------------- */
 
-//Nav Icon at mobile 
+//Nav Icon at mobile
 $('.nav-icon').on('click', function() {
     $(this).toggleClass('open');
 });
@@ -435,11 +435,11 @@ var menuLeft = document.getElementById('mobile-menu'),
     showLeft = document.getElementById('showLeft'),
     body = document.body;
 var classie;
-showLeft.onclick = function() {
-    classie.toggle(this, 'active');
-    classie.toggle(menuLeft, 'mobile-menu-open');
-    disableOther('showLeft');
-};
+// showLeft.onclick = function() {
+//     classie.toggle(this, 'active');
+//     classie.toggle(menuLeft, 'mobile-menu-open');
+//     disableOther('showLeft');
+// };
 
 function disableOther(button) {
     if (button !== 'showLeft') {
