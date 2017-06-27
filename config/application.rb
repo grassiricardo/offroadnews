@@ -11,7 +11,5 @@ module Offroadnews
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
-    config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
-    config.assets.paths << "#{Rails.root}/app/assets/stylesheets/site/fonts"
   end
 end
