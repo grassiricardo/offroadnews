@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   enum kind: [:salesman, :manager]
   enum status: [:active, :inactive]
-  has_many :news
+  has_many :noticas_news
 end

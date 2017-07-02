@@ -1,0 +1,173 @@
+<section class="headding-news">
+    <div class="container">
+        <div class="row row-margin">
+            <div class="hidden-xs col-sm-3 col-padding">
+                <div class="post-wrapper post-grid-1 wow fadeIn" data-wow-duration="2s">
+                    <div class="post-thumb">
+                        <a href="#">
+                          <%if @news_mundial_motocross.last != nil%>
+                            <%=image_tag(@news_mundial_motocross.last.photo_capa.header_home.url,  class: 'entry-thumb')%>
+                          <%else%>
+                            <%=image_tag('slide-06.jpg',  class: 'entry-thumb')%>
+                          <%end%>
+                        </a>
+                    </div>
+                    <div class="post-info">
+                        <span class="color-3">Mundial de Motocross </span>
+                        <h3 class="post-title post-title-size">
+                          <a href="#" rel="bookmark">
+                            <%if @news_mundial_motocross.last != nil%>
+                              <%=@news_mundial_motocross.last.title%>.
+                            <%end%>
+                          </a>
+                        </h3>
+                        <div class="post-editor-date">
+                            <!-- post date -->
+                            <div class="post-date">
+                              <i class="pe-7s-clock"></i>
+                              <%if @news_mundial_motocross.last != nil%>
+                                <%=@news_mundial_motocross.last.created_at.strftime("%d/%m/%Y")%>
+                              <%end%>
+                            </div>
+                            <!-- post comment -->
+                            <div class="post-author-comment"><i class="pe-7s-comment"></i> 13 </div>
+                            <!-- read more -->
+                            <a class="playvideo pull-right" href="details-style-three.html"><i class="fa fa-play-circle-o"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-wrapper post-grid-2 wow fadeIn" data-wow-duration="2s">
+                    <div class="post-thumb">
+                        <a href="#">
+                          <%if @news_ama_motocross.last != nil%>
+                            <%=image_tag(@news_ama_motocross.last.photo_capa.header_home.url,  class: 'entry-thumb')%>
+                          <%else%>
+                            <%=image_tag('slide-06.jpg',  class: 'entry-thumb')%>
+                          <%end%>
+                        </a>
+                      </h3>
+                    </div>
+                    <div class="post-info">
+                        <span class="color-5">Ama Motocross</span>
+                        <h3 class="post-title post-title-size">
+                          <a href="#" rel="bookmark">
+                            <%if @news_ama_motocross.last != nil%>
+                              <%=@news_ama_motocross.last.title%>.
+                            <%end%>
+                          </a>
+                        <div class="post-editor-date">
+                            <!-- post date -->
+                            <div class="post-date">
+                              <i class="pe-7s-clock"></i>
+                              <%if @news_ama_motocross.last != nil%>
+                                <%=@news_ama_motocross.last.created_at.strftime("%d/%m/%Y")%>
+                              <%end%>
+                            </div>
+                            <!-- post comment -->
+                            <div class="post-author-comment"><i class="pe-7s-comment"></i> 13 </div>
+                            <!-- read more -->
+                            <a class="playvideo pull-right" href="details-style-three.html"><i class="fa fa-play-circle-o"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-padding">
+                <div class="post-wrapper post-grid-3 effects">
+                    <div class="post-thumb">
+                        <a href="#">
+                            <div class="videoWrapper-1">
+                                <iframe width="560" height="349" src="<%=@video_header_home%>" frameborder="0" allowfullscreen id="yt"></iframe>
+                            </div>
+                            <div class="overlay" id="player">
+                                <a href="#" class="expand" id="player-button"><i class="fa fa-play"></i></a>
+                                <a class="close-overlay hidden">x</a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="post-info hidden-xs" id="post-info">
+                        <span class="color-4">Ama Supercross</span>
+                        <h3 class="post-title"><a href="#" rel="bookmark">There are many variations of passages of Lorem Ipsum available, but the majority have </a></h3>
+                        <div class="post-editor-date">
+                            <!-- post date -->
+                            <div class="post-date">
+                                <i class="pe-7s-clock"></i> Oct 6, 2016
+                            </div>
+                            <!-- post comment -->
+                            <div class="post-author-comment"><i class="pe-7s-comment"></i> 13 </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden-xs col-sm-3 col-padding">
+                <div class="post-wrapper post-grid-4 wow fadeIn" data-wow-duration="2s">
+                    <div class="post-thumb">
+                        <a href="#">
+                          <%if @news_ama_supercross.last != nil%>
+                            <%=image_tag(@news_ama_supercross.last.photo_capa.header_home.url,  class: 'entry-thumb')%>
+                          <%else%>
+                            <%=image_tag('slide-06.jpg',  class: 'entry-thumb')%>
+                          <%end%>
+                        </a>
+                    </div>
+                    <div class="post-info">
+                        <span class="color-1">Ama Supercross</span>
+                        <h3 class="post-title post-title-size">
+                          <a href="#" rel="bookmark">
+                            <%if @news_ama_supercross.last != nil%>
+                              <%=@news_ama_supercross.last.title%>.
+                            <%end%>
+                          </a>
+                        </h3>
+                        <div class="post-editor-date">
+                            <!-- post date -->
+                            <div class="post-date">
+                              <i class="pe-7s-clock"></i>
+                              <%if @news_ama_supercross.last != nil%>
+                                <%=@news_ama_supercross.last.created_at.strftime("%d/%m/%Y")%>
+                              <%end%>
+                            </div>
+                            <!-- post comment -->
+                            <div class="post-author-comment"><i class="pe-7s-comment"></i> 13 </div>
+                            <!-- read more -->
+                            <a class="playvideo pull-right" href="details-style-three.html"><i class="fa fa-play-circle-o"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-wrapper post-grid-5 wow fadeIn" data-wow-duration="2s">
+                    <div class="post-thumb">
+                        <a href="#">
+                          <%if @news_brasileiro_motocross.last != nil%>
+                            <%=image_tag(@news_brasileiro_motocross.last.photo_capa.header_home.url,  class: 'entry-thumb')%>
+                          <%else%>
+                            <%=image_tag('slide-06.jpg',  class: 'entry-thumb')%>
+                          <%end%>
+                        </a>
+                    </div>
+                    <div class="post-info">
+                        <span class="color-2">Brasileiro de Motocross</span>
+                        <h3 class="post-title post-title-size">
+                          <a href="#" rel="bookmark">
+                            <%if @news_brasileiro_motocross.last != nil%>
+                              <%=@news_brasileiro_motocross.last.title%>.
+                            <%end%>
+                          </a>
+                        </h3>
+                        <div class="post-editor-date">
+                            <!-- post date -->
+                            <div class="post-date">
+                              <i class="pe-7s-clock"></i>
+                              <%if @news_brasileiro_motocross.last != nil%>
+                                <%=@news_brasileiro_motocross.last.created_at.strftime("%d/%m/%Y")%>
+                              <%end%>
+                            </div>
+                            <!-- post comment -->
+                            <div class="post-author-comment"><i class="pe-7s-comment"></i> 13 </div>
+                            <!-- read more -->
+                            <a class="playvideo pull-right" href="details-style-three.html"><i class="fa fa-play-circle-o"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
