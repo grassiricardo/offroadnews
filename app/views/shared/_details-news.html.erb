@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <article class="content">
+                <div class="post-thumb">
+                  <%=image_tag(@new.photo_capa.details_principal.url,  class: 'img-responsive post-image')%>
+                  <div class="social">
+                    <ul>
+                      <li><a href="#" class="facebook"><i class="fa  fa-facebook"></i><span>3987</span> </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <h1><%=@new.title%>.</h1>
+                <div class="date">
+                  <ul>
+                    <li>By<a title="" href="#"><span>OffRoadNews</span></a> --</li>
+                    <li><a title="" href="#"><%=@new.created_at.strftime("%d/%m/%Y")%></a> --</li>
+                    <li><a title="" href="#"><span>275 Comments</span></a></li>
+                  </ul>
+                </div>
+                <p>
+                  <%=@new.content%>
+                </p>
+                <!-- Related news area
+                    ============================================ -->
+                <div class="related-news-inner">
+                  <h3 class="category-headding ">NOTICIAS RELACIONADAS</h3>
+                  <div class="headding-border"></div>
+                  <div class="row">
+                    <div id="content-slide-5" class="owl-carousel">
+                    <!-- item-1 -->
+                    <div class="item">
+                      <div class="row rn_block">
+                        <% @news_relations.each do |relations| %>
+                          <div class="col-xs-12 col-md-4 col-sm-4 padd">
+                            <div class="post-wrapper wow fadeIn" data-wow-duration="2s">
+                              <!-- image -->
+                              <div class="post-thumb">
+                                <a href="#">
+                                  <%=image_tag(relations.photo_capa.details_relations.url,  class: 'img-responsive')%>
+                                </a>
+                              </div>
+                              <div class="post-info meta-info-rn">
+                                <div class="slide">
+                                  <a target="_blank" href="#" class="post-badge btn_three">S</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="post-title-author-details">
+                              <h4><a href="#"><%=relations.title%>...</a></h4>
+                              <div class="post-editor-date">
+                                <div class="post-date">
+                                  <i class="pe-7s-clock"></i> <%=relations.created_at.strftime("%d/%m/%Y")%>
+                                </div>
+                                <div class="post-author-comment"><i class="pe-7s-comment"></i> 13 </div>
+                              </div>
+                            </div>
+                          </div>
+                        <%end%>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </article>
+        </div>
+        <div class="col-sm-4 left-padding">
+          <aside class="sidebar">
+            <div class="input-group search-area">
+              <!-- search area -->
+              <input type="text" class="form-control" placeholder="Search articles here ..." name="q">
+              <div class="input-group-btn">
+                <button class="btn btn-search" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+              </div>
+            </div>
+            <!-- /.search area -->
+            <div class="banner-add">
+              <!-- add -->
+              <span class="add-title">- Advertisement -</span>
+              <a href="#">
+                <!-- <img src="images/ad-banner.jpg" class="img-responsive center-block" alt=""> -->
+              </a>
+            </div>
+            <%= render 'shared/related-news'%>
+          </aside>
+        </div>
+    </div>
+</div>

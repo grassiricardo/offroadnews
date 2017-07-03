@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   root 'pages#index'
   get 'pages/index'
+  get 'pages/details'
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

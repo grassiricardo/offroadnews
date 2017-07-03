@@ -3,7 +3,6 @@ class PagesController < ApplicationController
   layout false
 
   def index
-
     #heaadding_news
     @video_header_home = VideoHeaderHome.all.last
     @news_mundial_motocross = NoticiasNew.where(category_new: 'mundial_motocross')
@@ -17,5 +16,10 @@ class PagesController < ApplicationController
     @news_brasil_details = NoticiasNew.where(origin_news: 'brasil').order('id desc').limit(3)
     @news_mundo = NoticiasNew.where(origin_news: 'mundo').order('id desc').limit(1)
     @news_mundo_details = NoticiasNew.where(origin_news: 'mundo').order('id desc').limit(4)
+  end
+
+  def details
+    @new = NoticiasNew.find(params[:id])
+    @news_relations = NoticiasNew.where(origin_news: @new.origin_news).order('id desc').limit(3)
   end
 end

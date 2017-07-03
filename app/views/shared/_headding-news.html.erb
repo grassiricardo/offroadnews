@@ -6,7 +6,7 @@
                     <div class="post-thumb">
                         <a href="#">
                           <%if @news_mundial_motocross.last != nil%>
-                            <%=image_tag(@news_mundial_motocross.last.photo_capa.header_home.url,  class: 'entry-thumb')%>
+                            <%=link_to image_tag(@news_mundial_motocross.last.photo_capa.header_home.url,  class: 'entry-thumb'), pages_details_path(id: @news_mundial_motocross.first.id)%>
                           <%else%>
                             <%=image_tag('slide-06.jpg',  class: 'entry-thumb')%>
                           <%end%>
