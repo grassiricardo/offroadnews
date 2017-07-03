@@ -13,7 +13,9 @@ class PagesController < ApplicationController
     @news_arena_cross = NoticiasNew.where(category_new: 'arena_cross')
 
     #container_news
-    @news_brasil = NoticiasNew.where(origin_news: 'brasil')
-    @news_mundo = NoticiasNew.where(origin_news: 'mundo')
+    @news_brasil = NoticiasNew.where(origin_news: 'brasil').order('id desc').limit(2)
+    @news_brasil_details = NoticiasNew.where(origin_news: 'brasil').order('id desc').limit(3)
+    @news_mundo = NoticiasNew.where(origin_news: 'mundo').order('id desc').limit(1)
+    @news_mundo_details = NoticiasNew.where(origin_news: 'mundo').order('id desc').limit(4)
   end
 end
