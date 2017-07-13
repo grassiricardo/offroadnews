@@ -6,7 +6,7 @@
                     <div class="post-thumb">
                         <a href="#">
                           <%if @news_mundial_motocross.last != nil%>
-                            <%=link_to image_tag(@news_mundial_motocross.last.photo_capa.header_home.url,  class: 'entry-thumb'), pages_details_path(id: @news_mundial_motocross.first.id)%>
+                            <%=link_to image_tag(@news_mundial_motocross.last.photo_capa.header_home.url,  class: 'entry-thumb'), pages_details_path(id: @news_mundial_motocross.first.id), method: :get%>
                           <%else%>
                             <%=image_tag('slide-06.jpg',  class: 'entry-thumb')%>
                           <%end%>
@@ -40,7 +40,7 @@
                     <div class="post-thumb">
                         <a href="#">
                           <%if @news_ama_motocross.last != nil%>
-                            <%=image_tag(@news_ama_motocross.last.photo_capa.header_home.url,  class: 'entry-thumb')%>
+                            <%=link_to image_tag(@news_ama_motocross.last.photo_capa.header_home.url,  class: 'entry-thumb'), pages_details_path(id: @news_ama_motocross.first.id), method: :get%>
                           <%else%>
                             <%=image_tag('slide-06.jpg',  class: 'entry-thumb')%>
                           <%end%>
@@ -85,12 +85,11 @@
                         </a>
                     </div>
                     <div class="post-info hidden-xs" id="post-info">
-                        <span class="color-4">Ama Supercross</span>
-                        <h3 class="post-title"><a href="#" rel="bookmark">There are many variations of passages of Lorem Ipsum available, but the majority have </a></h3>
+                        <span class="color-4">Ultimo Video</span>
                         <div class="post-editor-date">
                             <!-- post date -->
                             <div class="post-date">
-                                <i class="pe-7s-clock"></i> Oct 6, 2016
+                                <i class="pe-7s-clock"></i> <%=@video_header_home.created_at.strftime("%d/%m/%Y")%>
                             </div>
                             <!-- post comment -->
                             <div class="post-author-comment"><i class="pe-7s-comment"></i> 13 </div>
@@ -103,7 +102,7 @@
                     <div class="post-thumb">
                         <a href="#">
                           <%if @news_ama_supercross.last != nil%>
-                            <%=image_tag(@news_ama_supercross.last.photo_capa.header_home.url,  class: 'entry-thumb')%>
+                            <%=link_to image_tag(@news_ama_supercross.last.photo_capa.header_home.url,  class: 'entry-thumb'), pages_details_path(id: @news_ama_supercross.first.id), method: :get%>
                           <%else%>
                             <%=image_tag('slide-06.jpg',  class: 'entry-thumb')%>
                           <%end%>
@@ -137,7 +136,7 @@
                     <div class="post-thumb">
                         <a href="#">
                           <%if @news_brasileiro_motocross.last != nil%>
-                            <%=image_tag(@news_brasileiro_motocross.last.photo_capa.header_home.url,  class: 'entry-thumb')%>
+                            <%=link_to image_tag(@news_brasileiro_motocross.last.photo_capa.header_home.url,  class: 'entry-thumb'), pages_details_path(id: @news_brasileiro_motocross.first.id), method: :get%>
                           <%else%>
                             <%=image_tag('slide-06.jpg',  class: 'entry-thumb')%>
                           <%end%>

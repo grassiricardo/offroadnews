@@ -12,18 +12,18 @@
                     <div class="post-thumb">
                       <a href="#">
                         <%if @news_brasil != nil%>
-                          <%=image_tag(news_brasil.photo_capa.container_home.url,  class: 'img-responsive')%>
+                          <%=link_to image_tag(news_brasil.photo_capa.container_home.url,  class: 'img-responsive'), pages_details_path(id: news_brasil.id), method: :get%>
                         <%else%>
                           <%=image_tag('recent_news_01.jpg',  class: 'img-responsive')%>
                         <%end%>
-                        <div class="overlay">
-                          <a href="#" class="expand"><i class="fa fa-play"></i></a>
-                          <a class="close-overlay hidden">x</a>
-                        </div>
                       </a>
                     </div>
                   </div>
-                  <h3><a href="#"><%=news_brasil.title%></a></h3>
+                  <h3>
+                    <a>
+                      <%=link_to news_brasil.title, pages_details_path(id: news_brasil.id), method: :get%>
+                    </a>
+                  </h3>
                 </div>
               <%end%>
             </div>
@@ -32,23 +32,23 @@
             <% @news_brasil_details.each do |news_brasil| %>
               <div class="col-md-4 col-sm-4 padd">
                   <div class="home2-post">
-                      <div class="post-wrapper wow fadeIn effects" data-wow-duration="1s">
-                        <!-- image -->
-                        <div class="post-thumb">
-                          <a href="#">
-                            <%if @news_brasil != nil%>
-                              <%=image_tag(news_brasil.photo_capa.container_home_menor.url,  class: 'img-responsive')%>
-                            <%else%>
-                              <%=image_tag('recent_news_04.jpg',  class: 'img-responsive')%>
-                            <%end%>
-                            <div class="overlay">
-                              <a href="#" class="expand"><i class="fa fa-play"></i></a>
-                              <a class="close-overlay hidden">x</a>
-                            </div>
-                          </a>
-                        </div>
+                    <div class="post-wrapper wow fadeIn effects" data-wow-duration="1s">
+                      <!-- image -->
+                      <div class="post-thumb">
+                        <a href="#">
+                          <%if @news_brasil != nil%>
+                            <%=link_to image_tag(news_brasil.photo_capa.container_home_menor.url,  class: 'img-responsive'), pages_details_path(id: news_brasil.id), method: :get%>
+                          <%else%>
+                            <%=image_tag('recent_news_04.jpg',  class: 'img-responsive')%>
+                          <%end%>
+                        </a>
                       </div>
-                      <h4><a href="#"><%=news_brasil.title%></a></h4>
+                    </div>
+                    <h4>
+                      <a>
+                        <%=link_to news_brasil.title, pages_details_path(id: news_brasil.id), method: :get%>
+                      </a>
+                    </h4>
                   </div>
               </div>
             <%end%>
@@ -67,19 +67,19 @@
                   <% @news_mundo.each do |news_mundo| %>
                     <div class="post-wrapper wow fadeIn effects" data-wow-duration="2s">
                       <!-- post title -->
-                      <h3><a href="#"><%=news_mundo.title%>.</a></h3>
+                      <h3>
+                        <a>
+                          <%=link_to news_mundo.title, pages_details_path(id: news_mundo.id), method: :get%>
+                        </a>
+                      </h3>
                       <!-- post image -->
                       <div class="post-thumb">
                         <a href="#">
                           <%if @news_mundo != nil%>
-                            <%=image_tag(news_mundo.photo_capa.container_home.url,  class: 'img-responsive')%>
+                            <%=link_to image_tag(news_mundo.photo_capa.container_home.url,  class: 'img-responsive'), pages_details_path(id: news_mundo.id), method: :get%>
                           <%else%>
                             <%=image_tag('politics_01.jpg',  class: 'img-responsive')%>
                           <%end%>
-                          <div class="overlay">
-                            <a href="#" class="expand"><i class="fa fa-play"></i></a>
-                            <a class="close-overlay hidden">x</a>
-                          </div>
                         </a>
                       </div>
                       <div class="post-title-author-details">
@@ -105,19 +105,26 @@
                             <div class="post-thumb wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                               <a href="#">
                                 <%if @news_mundo != nil%>
-                                  <%=image_tag(news_mundo.photo_capa.container_home_menor.url,  class: 'img-responsive')%>
+                                  <%=link_to image_tag(news_mundo.photo_capa.container_home_menor.url,  class: 'img-responsive'), pages_details_path(id: news_mundo.id), method: :get%>
                                 <%else%>
                                   <%=image_tag('politics_03.jpg',  class: 'img-responsive')%>
                                 <%end%>
                                 <div class="overlay">
-                                  <a href="#" class="expand"><i class="fa fa-play"></i></a>
+                                  <a class="expand">
+                                    <i class="fa fa-play"></i>
+                                    <%=link_to pages_details_path(id: @news_mundo.first.id)%>
+                                  </a>
                                   <a class="close-overlay hidden">x</a>
                                 </div>
                               </a>
                             </div>
                             <div class="post-title-author-details">
                               <!-- post image -->
-                              <h5><a href="#"><%=news_mundo.title%></a></h5>
+                              <h5>
+                                <a>
+                                  <%=link_to news_mundo.title, pages_details_path(id: news_mundo.id), method: :get%>
+                                </a>
+                              </h5>
                             </div>
                           </div>
                         </div>

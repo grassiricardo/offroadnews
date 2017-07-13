@@ -61,19 +61,18 @@
                 </div>
                 <!--breaking news-->
                 <div class="col-sm-8 col-md-7">
-                    <div class="newsticker-inner">
-                        <ul class="newsticker">
-                            <li><span class="color-1">Fashion</span><a href="#">Etiam imperdiet volutpat libero eu tristique.imperdiet volutpat libero eu tristique.</a></li>
-                            <li><span class="color-2">International</span><a href="#">Curabitur porttitor ante eget hendrerit adipiscing.</a></li>
-                            <li><span class="color-3">Health</span><a href="#">Praesent ornare nisl lorem, ut condimentum lectus gravida ut.</a></li>
-                            <li><span class="color-4">technology</span><a href="#">Nunc ultrices tortor eu massa placerat posuere.</a></li>
-                            <li><span class="color-1">Travel</span><a href="#">Etiam imperdiet volutpat libero eu tristique.imperdiet volutpat libero eu tristique.</a></li>
-                        </ul>
-                        <div class="next-prev-inner">
-                            <a href="#" id="prev-button"><i class='pe-7s-angle-left'></i></a>
-                            <a href="#" id="next-button"><i class='pe-7s-angle-right'></i></a>
-                        </div>
-                    </div>
+                  <div class="newsticker-inner">
+                    <ul class="newsticker">
+                      <%@news_loader.each do |new_loader| %>
+                        <li>
+                          <span class="color-1">Ultimas Noticias</span>
+                          <a>
+                            <%=link_to new_loader.title, pages_details_path(id: new_loader.id), method: :get%>
+                          </a>
+                        </li>
+                      <%end%>
+                    </ul>
+                  </div>
                 </div>
                 <div class="col-sm-12 col-md-2">
                   <div class="top_header_icon">
@@ -91,15 +90,15 @@
                 <div class="col-xs-12 col-md-4 col-sm-4">
                     <div class="header-logo">
                         <!-- logo -->
-                        <a href="/">
-                          <%=image_tag('logo.png',  class: 'td-retina-data img-responsive')%>
+                        <a>
+                          <%=link_to image_tag('logo.png', class: 'td-retina img-responsive'), root_path, method: :get%>
                         </a>
                     </div>
                 </div>
                 <div class="col-xs-8 col-md-8 col-sm-8 hidden-xs">
                     <div class="header-banner">
-                        <a href="#">
-                          <%=image_tag('top-bannner.jpg',  class: 'td-retina img-responsive')%>
+                        <a>
+                          <%=link_to image_tag('top-bannner.jpg', class: 'td-retina img-responsive'), root_path, method: :get%>
                         </a>
                     </div>
                 </div>
