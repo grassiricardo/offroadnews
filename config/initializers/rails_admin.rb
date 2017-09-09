@@ -38,4 +38,19 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model NoticiasNew do
+    edit do
+      field :title
+      field :sub_title
+      field :content, :ck_editor
+      field :photo_cap
+      field :diplay_date
+      field :category_id
+      field :show_slide_show
+      field :photo_capa
+      field :category_new
+      field :origin_news
+    end
+  end
 end
